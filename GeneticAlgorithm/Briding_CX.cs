@@ -8,9 +8,7 @@ namespace GeneticAlgorithm
 {
     public class Briding_CX: ABriding
     {
-        //public Briding_CX(double[,] data) : base(data) { }
-
-        public override Person GetBriding(Person first, Person second/*, double[,] data*/)
+        public override Person GetBriding(Person first, Person second)
         {
             int Size = first.Solution().Count;
             int[] question = new int[Size];
@@ -57,7 +55,7 @@ namespace GeneticAlgorithm
                             question[i] = second.Solution()[i];
                 }
             }
-            return new Person(new List<int>(question)/*, GetCriteria(new List<int>(question), data)*/);
+            return new Person(new List<int>(question));
         }
     }
 }
