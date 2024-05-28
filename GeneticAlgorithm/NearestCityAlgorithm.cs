@@ -8,12 +8,8 @@ namespace GeneticAlgorithm
 {
     class NearestCityAlgorithm: Algorithm
     {
-        /*private double[,] M;
-        private List<int> Ham;*/
         public NearestCityAlgorithm(double[,] M, int town=0): base(M, town)
         {
-            /*this.M = M;
-            Ham = new List<int>();*/
         }
         public override Person GiveSolution()
         {
@@ -28,7 +24,6 @@ namespace GeneticAlgorithm
                 if (Ham.Count == Math.Sqrt(M.Length))
                     break;
             }
-            //Ham.Add(0);
             return new Person(Ham, GetCriteria());
         }
         private int Str_Min(int str_num)
@@ -43,12 +38,5 @@ namespace GeneticAlgorithm
                 }
             return ind;
         }
-        /*public double GetCriteri()
-        {
-            double Cr = 0;
-            for (int i = 0; i < Ham.Count - 1; i++)
-                Cr = Cr + this.M[Ham[i], Ham[i + 1]];
-            return Cr;
-        }*/
     }
 }
