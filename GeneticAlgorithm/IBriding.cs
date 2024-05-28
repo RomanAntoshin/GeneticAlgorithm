@@ -8,6 +8,6 @@ namespace GeneticAlgorithm
 {
     public interface IBriding
     {
-        public Person GetBriding(Person first, Person second/*, double[,] data*/);
+        public Person GetBriding(Person first, Person second);
     }
 }
