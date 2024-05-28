@@ -8,15 +8,12 @@ namespace GeneticAlgorithm
 {
     class WoodenAlgorithm: Algorithm
     {
-        //private double[,] M;
-        private List<Edge> Skeleton/*=new List<Edge>()*/;
-        private List<int> Eu /*= new List<int>()*/;
+        private List<Edge> Skeleton;
+        private List<int> Eu;
         //private int start;
-        //private List<int> Ham /*= new List<int>()*/;
+        //private List<int> Ham;
         public WoodenAlgorithm(double[,] M, int town=0): base(M, town)
         {
-            //this.M = M;
-            //start = GenerateStartCity();
         }
         public override Person GiveSolution()
         {
@@ -59,12 +56,8 @@ namespace GeneticAlgorithm
                 Skeleton.Add(E);
                 usedV.Add(ind2);
                 notUsedV.Remove(ind2);
-                //textBox2.Clear();
                 min = M[0, 0];
             }
-            /*foreach (int el in usedV)
-                Console.Write(el+ " ");
-            Console.WriteLine();*/
         }
         private void GetMultigraph()
         {
@@ -97,9 +90,6 @@ namespace GeneticAlgorithm
                         }
                 }
             }
-            /*foreach (int el in Eu)
-                Console.Write(el + " ");
-            Console.WriteLine();*/
         }
         private bool GetDegree(int V)
         {
@@ -110,16 +100,11 @@ namespace GeneticAlgorithm
         }
         private void CycleByHamilton()
         {
-            //Ham = new List<int>();
             for (int i = 0; i < Eu.Count; i++)
             {
                 if (!Ham.Contains(Eu[i]))
                     Ham.Add(Eu[i]);
             }
-            //Ham.Add(0);
-            /*foreach (int el in Ham)
-                Console.Write(el+" ");
-            Console.WriteLine();*/
         }
     }
 }
