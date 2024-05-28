@@ -10,8 +10,6 @@ namespace GeneticAlgorithm
     {
         private List<Edge> Skeleton;
         private List<int> Eu;
-        //private int start;
-        //private List<int> Ham;
         public WoodenAlgorithm(double[,] M, int town=0): base(M, town)
         {
         }
