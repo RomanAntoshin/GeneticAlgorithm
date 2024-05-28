@@ -23,7 +23,6 @@ namespace GeneticAlgorithm
                 AddChildren(Group[key[0]], Group[key[1]]);
                 Distance.Remove(key);
             }
-            //Mutation.Run(children);
             GetMutation();
             List<int> defect = new List<int>();
             for (int i = 0; i < Group.Length / 4; i++)
