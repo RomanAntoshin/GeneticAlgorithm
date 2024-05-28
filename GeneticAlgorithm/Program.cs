@@ -43,12 +43,6 @@ namespace GeneticAlgorithm
                 stopwatch.Start();
                 for (int j = 0; j < N; j++)
                 {
-                    /*if (j == N - 1 || j == 0)
-                    {
-                        int ind = GetBestPersonAt(first_group);
-                        Console.WriteLine("Best - " + first_group[ind].Criteria);
-                        Console.WriteLine(j);
-                    }*/
                     AStrategy str = new Panmixia(briding, data, first_group);
                     str.Iteration();
                 }
