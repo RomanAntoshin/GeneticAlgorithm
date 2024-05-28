@@ -27,10 +27,6 @@ namespace GeneticAlgorithm
             double[] buffer;
             int N;
             int i = 0;
-            /*OpenFileDialog OD = new OpenFileDialog();
-            OD.DefaultExt = ".txt";*/
-            /*if (OD.ShowDialog() == DialogResult.OK)
-                filename = OD.FileName;*/
             StreamReader sr = new StreamReader(filename);
             buf = sr.ReadLine();
             N = int.Parse(buf);
