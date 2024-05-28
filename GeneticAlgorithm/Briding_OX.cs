@@ -8,8 +8,7 @@ namespace GeneticAlgorithm
 {
     public class Briding_OX: ABriding
     {
-        //public Briding_OX(double[,] data): base(data) { }
-        public override Person GetBriding(Person first, Person second/*, double[,] data*/)
+        public override Person GetBriding(Person first, Person second)
         {
             Random rnd = new Random();
             int N = first.Solution().Count;
@@ -38,12 +37,7 @@ namespace GeneticAlgorithm
                 solution[i] = swap[k];
                 k++;
             }
-            return new Person(new List<int>(solution)/*, GetCriteria(new List<int>(solution), data)*/);
+            return new Person(new List<int>(solution));
         }
-
-        /*public override Person GetBriding(Person first, Person second, double[,] data)
-        {
-            throw new NotImplementedException();
-        }*/
     }
 }
