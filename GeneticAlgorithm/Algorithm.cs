@@ -11,13 +11,11 @@ namespace GeneticAlgorithm
         protected double[,] M;
         protected List<int> Ham;
         protected int town;
-        //protected Random random;
         public Algorithm(double[,] M, int town = 0)
         {
             this.M = M;
             Ham = new List<int>();
             this.town = town;
-            //random = new Random();
         }
         public Algorithm(double[,] M, List<int> Ham, int town = 0)
         {
@@ -35,14 +33,6 @@ namespace GeneticAlgorithm
             Cr = Cr + this.M[Ham[Ham.Count-1], Ham[0]];
             return Cr;
         }
-        /*public static double GetCriteria(List<int> solution)
-        {
-            double Cr = 0;
-            for (int i = 0; i < solution.Count - 1; i++)
-                Cr = Cr + M[Ham[i], Ham[i + 1]];
-            Cr = Cr + this.M[Ham[Ham.Count - 1], Ham[0]];
-            return Cr;
-        }*/
         protected int GenerateStartCity()
         {
             Random rnd = new Random();
