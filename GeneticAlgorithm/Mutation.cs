@@ -19,26 +19,17 @@ namespace GeneticAlgorithm
                 if (r > 50 && r <= 80)
                 {
                     PointMutation(group[i].Solution());
-                    //group[i].Criteria = GetCriteria(group[i].Solution(), data);
                 }
                 if (r > 80 && r <= 90)
                 {
                     InversionMutation(group[i].Solution());
-                    //group[i].Criteria = GetCriteria(group[i].Solution(), data);
                 }
                 if (r > 90)
                 {
                     SaltationMutation(group[i].Solution());
-                    //group[i].Criteria = GetCriteria(group[i].Solution(), data);
                 }
             }
         }
-
-        /*private static void PointMytation(List<int> list)
-        {
-            throw new NotImplementedException();
-        }*/
-
         private static void PointMutation(List<int> person)
         {
             Random rnd = new Random();
@@ -51,9 +42,7 @@ namespace GeneticAlgorithm
         {
             Random rnd = new Random();
             int f = rnd.Next(0, person.Count / 2);
-            //Console.WriteLine(f);
             int s = rnd.Next(person.Count / 2, person.Count);
-            //Console.WriteLine(s);
             List<int> part = new List<int>();
             for (int i = s; i >= f; i--)
             {
